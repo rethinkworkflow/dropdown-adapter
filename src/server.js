@@ -11,7 +11,7 @@ app.get("/postgresql", (request, response) => {
 
   const query = {
     order: ["name"],
-    limit: parseInt(req.query.limit) || 10
+    limit: parseInt(request.query.limit) || 10
   };
 
   if (!isEmpty(request.query.nameColumn) || !isEmpty(request.query.valueColumn)) {
